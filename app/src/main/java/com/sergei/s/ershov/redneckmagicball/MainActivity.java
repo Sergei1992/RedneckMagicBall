@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Toast Example
+        Toast toast = Toast.makeText(this,
+                "Wats up Redneck!", Toast.LENGTH_LONG);
+        toast.show();
+
         txt = (TextView) findViewById(R.id.myText);
         btn = (Button) findViewById(R.id.myButton);
 
