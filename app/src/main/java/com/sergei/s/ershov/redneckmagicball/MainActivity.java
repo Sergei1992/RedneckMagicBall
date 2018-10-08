@@ -4,14 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    TextView txt;
+    ImageView img;
     Button btn;
     Random rng = new Random();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 "Wats up Redneck!", Toast.LENGTH_LONG);
         toast.show();
 
-        txt = (TextView) findViewById(R.id.myText);
+        img = (ImageView) findViewById(R.id.myImage);
         btn = (Button) findViewById(R.id.myButton);
 
 
@@ -34,35 +36,35 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (randomNumber) {
                     case 1:
-                        txt.setText("Heal No");
+                        img.setImageResource(R.drawable.healno);
                         break;
 
                     case 2:
-                        txt.setText("Heal Yes");
+                        img.setImageResource(R.drawable.healyes);
                         break;
 
                     case 3:
-                        txt.setText("I tell you what, don`t");
+                        img.setImageResource(R.drawable.dont);
                         break;
 
                     case 4:
-                        txt.setText("Just tri it");
+                        img.setImageResource(R.drawable.tryit);
                         break;
 
                     case 5:
-                        txt.setText("Wut?");
+                        img.setImageResource(R.drawable.wut);
                         break;
 
                     case 6:
-                        txt.setText("I doubt it");
+                        img.setImageResource(R.drawable.doubit);
                         break;
 
                     case 7:
-                        txt.setText("Imma alredy drunk");
+                        img.setImageResource(R.drawable.drunk);
                         break;
 
                     case 8:
-                        txt.setText("Don`t be a pussy");
+                        img.setImageResource(R.drawable.pussy);
                         break;
 
                 }
